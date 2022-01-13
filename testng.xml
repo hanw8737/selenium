@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+<listeners>
+	<listener class-name="org.uncommons.reportng.HTMLReporter"></listener>
+	<listener class-name="org.uncommons.reportng.JUnitXMLReporter"></listener>
+	<listener class-name="com.mushishi.Imooc.util.TestCaseReport"></listener>
+	<listener class-name="com.mushishi.Imooc.TestNGListennerSendEmail"></listener>
+</listeners>
+
+<parameter name="browser" value="chrome"/>
+  <test name="Test">
+    <classes>
+    <class name="com.mushishi.Imooc.runcase.LoginCase" >
+    <parameter name="username" value="Mushishi_xu@163.com"/>
+	<parameter name="password" value="111111"/>
+	<parameter name="url" value="https://www.imooc.com"/>
+	      <methods>     
+	      	<include name="TestLoginEmailError" ></include>
+	      	<include name="TestLoginSucess"></include>   
+	      	<include name="Test01"></include>
+	      </methods>
+	</class>
+	</classes>
+</test>
+	<test name="cart">
+	<classes>
+	<class name="com.mushishi.Imooc.runcase.CourseCase" >
+		<parameter name="url" value="https://coding.imooc.com/class/303.html"/>
+		<parameter name="coursename" value="剑指Java面试-Offer直通车"/>
+	      <methods>
+	      	<exclude name="testbeforeClass"></exclude>
+	      	<include name="TestAddCourseSucess" ></include>
+	      	<include name="TestAleradyBuy" ></include>
+	      	<include name="TestAlreadyLogin" ></include>
+	      	   	
+	      </methods>
+	  </class>
+	  </classes>
+	  </test>
+	<test name="sure">
+	<classes>
+	  <class name="com.mushishi.Imooc.runcase.SureSubmitCase" >
+	  		<parameter name="url" value="https://order.imooc.com/pay/confirm/goods_ids/1-315"/>
+	      <methods>
+	      	<include name="LoginSureSubmit" ></include>
+	      	<include name="SureSubmit" ></include>      	
+	      </methods>
+	  </class>  
+	  </classes>
+ 	</test> <!-- Test -->
+
+  
+
+</suite> <!-- Suite -->

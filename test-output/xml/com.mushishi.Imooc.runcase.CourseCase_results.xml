@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cart"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="5.352">
+  <properties />
+  
+  
+            <testcase name="TestAddCourseSucess" time="5.352" classname="com.mushishi.Imooc.runcase.CourseCase" />
+      
+</testsuite>

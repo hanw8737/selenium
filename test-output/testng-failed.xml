@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="Test(failed)">
+    <parameter name="password" value="111111"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="url" value="https://www.imooc.com"/>
+    <parameter name="username" value="Mushishi_xu@163.com"/>
+    <classes>
+      <class name="com.mushishi.Imooc.runcase.LoginCase">
+        <methods>
+          <include name="TestLoginSucess" invocation-numbers="0"/>
+          <include name="beforeClass"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.mushishi.Imooc.runcase.LoginCase -->
+    </classes>
+  </test> <!-- Test(failed) -->
+  <test thread-count="5" name="Test1(failed)">
+    <parameter name="password" value="111111"/>
+    <parameter name="browser" value="firefox"/>
+    <parameter name="url" value="https://www.imooc.com"/>
+    <parameter name="username" value="Mushishi_xu@163.com"/>
+    <classes>
+      <class name="com.mushishi.Imooc.runcase.LoginCase">
+        <methods>
+          <include name="TestLoginEmailError" invocation-numbers="0"/>
+          <include name="beforeClass"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.mushishi.Imooc.runcase.LoginCase -->
+    </classes>
+  </test> <!-- Test1(failed) -->
+</suite> <!-- Failed suite [Suite] -->
